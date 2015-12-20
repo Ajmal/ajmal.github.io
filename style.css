@@ -1,0 +1,57 @@
+body {
+	color: #555558;
+}
+
+a {
+	border-bottom: 1px solid #efefef;
+	text-decoration: none;
+	color: #029EF7;
+}
+
+a:hover {
+	border-bottom: 1px solid #bbb;
+	text-decoration: none;
+	color: #2B93EA;
+}
+
+#header {
+	overflow: auto;
+	padding: 15px 30px;
+}
+
+#header h1 {
+	float: left;
+	color: #cccccc;
+	font-size: 1.2rem;
+}
+
+#header .menu {
+	float: right;
+}
+
+.content {
+	margin: 0 auto;
+	max-width: 768px;
+	position: relative;
+}
+
+.description {
+	/*padding: 0 20px;*/
+	top: 40%;
+	left: 20%;
+	position: absolute;
+	z-index: 2;
+	right: 40%;
+}
+
+.description p {
+	line-height: 1.8rem;
+}
+
+.gist .gist-data {
+	border-bottom: 0 !important;
+}
+
+.gist-meta {
+	display: none;
+}
