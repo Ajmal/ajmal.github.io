@@ -44,6 +44,17 @@ a:hover {
 	right: 40%;
 }
 
+@media screen and (max-width: 48em) {
+	.description {
+		/*padding: 0 20px;*/
+		top: 40%;
+		left: 20px;
+		position: absolute;
+		z-index: 2;
+		right: 20px;
+	}
+}
+
 .description p {
 	line-height: 1.8rem;
 }
