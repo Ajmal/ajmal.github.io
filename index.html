@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title>Ajmal Eylia</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 	<link rel="stylesheet" href="/style.css">
-
 	<link rel="shortcut icon" href="/favicon.ico">
 </head>
 <body>
@@ -41,7 +41,8 @@
 			var render_me = function() {
 				var c = '';
 				$.get( "/me.json", function( data ) {
-					c = '<h2>'+data.name+'</h2>';
+					// c = '<img src="'+data.gravatar+'" alt="ajmal">';
+					c += '<h2>'+data.name+'</h2>';
 					c += '<p>'+data.description+'</p>';
 			  		$( ".description" ).html( c ).velocity('fadeIn', {});
 				});
