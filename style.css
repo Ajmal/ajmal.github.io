@@ -14,6 +14,34 @@ a:hover {
 	color: #2B93EA;
 }
 
+.contact_overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 3;
+	display: none;
+	background: #028dff;
+	background: -moz-linear-gradient(left,  #028dff 0%, #b45eff 100%);
+	background: -webkit-linear-gradient(left,  #028dff 0%,#b45eff 100%);
+	background: linear-gradient(to right,  #028dff 0%,#b45eff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#028dff', endColorstr='#b45eff',GradientType=1 );
+}
+
+.contact_content {
+	padding: 20px 30px 80px;
+	background: #f7f7f7;
+	color: #333338;
+	margin: 0 auto;
+}
+
+p.close {
+	text-align: right;
+	margin: 0;
+	padding: 10px 0
+}
+
 #header {
 	overflow: auto;
 	padding: 15px 30px;
@@ -29,6 +57,10 @@ a:hover {
 	float: right;
 }
 
+#header .menu a{
+	margin: 0 0 0 20px
+}
+
 .content {
 	margin: 0 auto;
 	max-width: 768px;
@@ -42,16 +74,17 @@ a:hover {
 	position: absolute;
 	z-index: 2;
 	right: 40%;
+	display: none;
 }
 
 @media screen and (max-width: 48em) {
 	.description {
 		/*padding: 0 20px;*/
 		top: 40%;
-		left: 20px;
+		left: 30px;
 		position: absolute;
 		z-index: 2;
-		right: 20px;
+		right: 30px;
 	}
 }
 

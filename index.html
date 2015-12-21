@@ -6,19 +6,61 @@
 	<link rel="stylesheet" href="/style.css">
 
 	<link rel="shortcut icon" href="/favicon.ico">
-
 </head>
 <body>
+
+	<div class="contact_overlay">
+		<div class="contact_content">
+			<p class="close"><a href="#" id="close_contact">Close</a></p>
+			<div class="content">
+				<h2>Contact</h2>
+
+				Send me an email at
+
+				<pre>aj.eylia</pre>
+				<pre>@gmail.com</pre>
+			</div>
+		</div>
+	</div>
+
 	<div id="header">
 		<h1>AE</h1>
 
-		<p class="menu"><!-- <a href="#">Resume</a>  - <a href="#">Design Work</a> - <a href="#">Contact</a> --></p>
+		<p class="menu"><a href="/ajmal_eylia.pdf">Resume</a>  <!-- - <a href="#">Design Work</a> -->  <a href="#" id="contact_cta">Contact</a> </p>
 	</div>
 
 	<div class="description">
-		<script src="https://gist.github.com/Ajmal/53993d33dbbc0c5379a2.js"></script>
 	</div>
 
+	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/velocity/1.2.3/velocity.ui.min.js"></script>
+
+	<script type="text/javascript">
+		$(function() {
+			var render_me = function() {
+				var c = '';
+				$.get( "/me.json", function( data ) {
+					c = '<h2>'+data.name+'</h2>';
+					c += '<p>'+data.description+'</p>';
+			  		$( ".description" ).html( c ).velocity('fadeIn', {});
+				});
+			};
+
+			render_me();
+
+			$('#contact_cta').click( function(event) {
+				event.preventDefault();
+				$('.contact_overlay').velocity('fadeIn', { duration: 250 });
+			});
+
+			$('#close_contact').click( function(event) {
+				event.preventDefault();
+				$('.contact_overlay').velocity('fadeOut', { duration: 250 });
+			});
+		});
+	</script>
+	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
