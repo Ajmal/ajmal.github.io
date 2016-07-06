@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Ajmal Eylia</title>
+	<title>Ajmal Eylia - Freelance UI App Designer &amp; App developer.</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-	<meta name="description" content="Ajmal is a Software Engineer from Kuala Lumpur, Malaysia.">
+	<meta name="description" content="Ajmal is a freelance Software Engineer, creating beautiful iOS, Android &amp; Websites for clients.">
     <meta name="keywords" content="Malaysia web developer, Rails Developer">
     <meta name="author" content="AJMAL EYLIA ajmaleylia" />
 
@@ -14,6 +14,20 @@
 </head>
 <body>
 
+	<div id="header">
+		<h1>AE</h1>
+
+		<div class="menu"><a href="/ajmal_eylia_resume.pdf">Resume</a>  <!-- - <a href="#">Design Work</a> -->  <a href="#" id="contact_cta">Contact</a> </div>
+	</div>
+
+	<div id="content">
+		<div class="description">
+			<h2>Ajmal Eylia</h2>
+			<p>I design User Interfaces (UI Designer) for mobile, apps, software and websites. I also develop webapp using Ruby on Rails.</p>
+			<p>I'm currently available for freelance Ruby on Rails and UI design work.</p>
+		</div>
+	</div><!-- content close -->
+	
 	<div class="contact_overlay">
 		<div class="contact_content">
 			<p class="close"><a href="#" id="close_contact">Close</a></p>
@@ -26,15 +40,6 @@
 				<pre>@gmail.com</pre>
 			</div>
 		</div>
-	</div>
-
-	<div id="header">
-		<h1>AE</h1>
-
-		<p class="menu"><a href="/ajmal_eylia_resume.pdf">Resume</a>  <!-- - <a href="#">Design Work</a> -->  <a href="#" id="contact_cta">Contact</a> </p>
-	</div>
-
-	<div class="description">
 	</div>
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -53,7 +58,10 @@
 				});
 			};
 
-			render_me();
+			// render_me();
+
+	  		$( ".description" ).velocity('fadeIn', {});
+
 
 			$('#contact_cta').click( function(event) {
 				event.preventDefault();

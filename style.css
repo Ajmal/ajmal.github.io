@@ -23,9 +23,9 @@ a:hover {
 	z-index: 3;
 	display: none;
 	background: #028dff;
-	background: -moz-linear-gradient(left,  #028dff 0%, #b45eff 100%);
-	background: -webkit-linear-gradient(left,  #028dff 0%,#b45eff 100%);
-	background: linear-gradient(to right,  #028dff 0%,#b45eff 100%);
+	background: -moz-linear-gradient(left,  #028dff 0%, #545eff 100%);
+	background: -webkit-linear-gradient(left,  #028dff 0%,#545eff 100%);
+	background: linear-gradient(to right,  #028dff 0%,#545eff 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#028dff', endColorstr='#b45eff',GradientType=1 );
 }
 
@@ -55,6 +55,7 @@ p.close {
 
 #header .menu {
 	float: right;
+	margin: 15px 0 0 
 }
 
 #header .menu a{
